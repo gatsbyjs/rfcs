@@ -4,14 +4,13 @@
 
 # Summary
 
-Brief explanation of the feature.
+WordPress is an excellent headless CMS for Gatsby, but many WordPress plugins require an additional wrapper before their data can be used within Gatsby. This RFC proposes adding support for _subplugins_ to `gatsby-source-wordpress`, so individual WordPress plugins can work with Gatsby without requiring changes to `gatsby-source-wordpress` itself.
 
 # Basic example
 
-> If the proposal involves a new or changed API, include a basic code example.
-Omit this section if it's not applicable.
+Currently, a select number of WordPress plugins are supported within `gatsby-source-wordpress`.
 
-As suggested by @m-allanson in https://github.com/gatsbyjs/gatsby/issues/5796#issue-330604409, configuring subplugins might look like this:
+What if `gatsby-source-wordpress` had a generic way to pull in data from any plugin’s WordPress REST API endpoint? As suggested by @m-allanson in https://github.com/gatsbyjs/gatsby/issues/5796#issue-330604409, the configuration for that might look like this:
 
 ```js
 // In your gatsby-config.js
@@ -40,7 +39,7 @@ module.exports = {
 }
 ```
 
-A subplugin reads the WordPress plugin’s REST API, and translates the output into something usable by GraphQL and Gatsby. This makes it possible for developers building with Gatsby to query access the WordPress plugin’s endpoints through GraphQL.
+A subplugin would read the WordPress plugin’s REST API, and translates the output into something usable by GraphQL and Gatsby. This makes it possible for developers building with Gatsby to query access the WordPress plugin’s endpoints through GraphQL.
 
 For example, after adding `gatsby-wordpress-gravity-forms`, `allWordpressGfForms` and `wordpressGfForms` are available to query.
 
@@ -59,7 +58,14 @@ closely to the solution you have in mind.
 
 Supporting every available WordPress (WP) plugin within `gatsby-source-wordpress` is already becoming unwieldy, as we discussed adding support for a TK fifth plugin, Gravity Forms.
 
-The existing list of plugins that gatsby-wordpress-source has built-in for is short, and it should stay that way. While a plugin like Advanced Custom Fields (ACF) is useful in almost any WordPress/Gatsby project, Gravity Forms probably isn’t. Even more obscure WordPress plugins could still be supported, but not everyone using `gatsby-wordpress-source` needs the wrappers for these WP plugins.
+The existing list of plugins that `gatsby-wordpress-source` has built-in for is short, and it should stay that way. While a plugin like Advanced Custom Fields (ACF) is useful in almost any WordPress/Gatsby project, Gravity Forms probably isn’t. Even more obscure WordPress plugins could still be supported, but not everyone using `gatsby-wordpress-source` needs the wrappers for these WP plugins.
+
+- Makes `gatsby-wordpress-source` flexible, requiring less changes or hacked-in conditionals to this core module
+- The subplugins become responsible for testing, which means the Gatsby Core team can more easily decide what falls within the realm of what they want to support, and what falls to other developers. For example, as @pieh and I have already discussed in #5599, perhaps it wouldn’t make sense for the Gatsby Core team to support a premium WordPress plugin with a fairly specific use case, but another developer who had regular use for it could.
+- Even if the subplugin still lived within the Gatsby repository, it is much easier to deligate responsibilities when the subplugins are broken down
+- Don’t have to “endorse” plugins, ie. can support more than one WordPress plugin for the same use case: for example, might have a subplugin for the Contact Form 7 WordPress plugin and the Gravity Forms WordPress plugin, but it would be very strange to support both of these within `gatsby-source-wordpress` 
+
+- Similar to the idea of Custom Normalizers that was merged, but also involves getting the plugin data in the first place: https://github.com/gatsbyjs/gatsby/pull/5603
 
 # Detailed design
 
@@ -141,4 +147,4 @@ at any level?
 TBD?
 
 - **Would this mean moving the existing plugins supported out of `gatsby-source-wordpress`?** Right now I think we should keep ACF support in `gatsby-source-wordpress`, but I can also see the case for moving all WordPress plugin…plugins out of it.
-- **Should the plugins be responsible for re-formatting data for Gatsby when needed?** Often, the WP REST API returns nothing or `false` when you need it to return `null` for GraphQL. This also happens within the WP REST API implementations of each individual WordPress plugin. It can be solved with another WordPress plugin, but then you’d need a the original WP plugin, the companion WordPress plugin, and the companion Gatsby plugin to be able to support any WP plugins. Alternatively, the Gatsby plugin can it. I believe there is a proposal (from @pieh?) about mitigating this at a higher level for other Gatsby source plugins too, not sure if that would extend to this.
+- **Should the plugins be responsible for re-formatting data for Gatsby when needed?** Often, the WP REST API returns nothing or `false` when you need it to return `null` for GraphQL. This also happens within the WP REST API implementations of each individual WordPress plugin. It can be solved with another WordPress plugin, but then you’d need a the original WP plugin, the companion WordPress plugin, and the companion Gatsby plugin to be able to support any WP plugins. Alternatively, the Gatsby plugin can it. I believe there is a proposal (from @pieh?) about mitigating this at a higher level for other Gatsby source plugins too, not sure if that would extend to this. (Can this already be done with the new Normalizers option? https://github.com/gatsbyjs/gatsby/pull/5603)
