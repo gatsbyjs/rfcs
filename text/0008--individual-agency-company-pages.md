@@ -55,9 +55,9 @@ Users who visit this page should be able to:
 #### All people / agencies / companies
 
 One template with multiple URLs, each of which apply different filters:
-  * /people/ (all people)
-  * /agencies/ (all agencies)
-  * /companies/ (all companies)
+  * /community/people/ (all people)
+  * /community/agencies/ (all agencies)
+  * /community/companies/ (all companies)
 
 Filter buttons should be at the top and should be easy to toggle between them (select-one). Filters should include:
   * Individual 
@@ -78,20 +78,18 @@ One template with multiple URL patterns, depending on the Creator type:
 
 Showcase sites ([listed here](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml)) can have multiple Creators.
 
-**Creators** can either be an Individual, a Digital Agency, or a Company. . 
+**Creators** can either be an Individual, a Digital Agency, or a Company.
 
 Creator has the following fields:
 * an id, in slug format (eg mike-allanson)
 * type -- Individual, a Digital Agency, or a Company. We use the word Organization below to refer to either a Digital Agency and Company.
 * a description of them in the third person “Eg, Mike Allanson is a developer living in London"
-* Personal website
+* Personal or organization website
 * GH handle (?)
 * Open for Work [boolean]
 * A photo / logo (depending on Individual / Organization type)
-* Org they are affiliated with (if Individual)
-* People they are affiliated with (if Org)
-* A list of open jobs (if they are Organization type)
-* A list of all the sites they’ve built.
+* A list of open jobs
+* A list of all the sites they’ve built (displayed as thumbnails).
 * A location with:
     * A description (“London, UK”)
     * Lat / lng
@@ -106,10 +104,9 @@ _Data Format_: all creators should live in a creators.yml file, similar to sites
 * (Optional) salary high end
 * (Optional) salary currency
 * Contact email or application link. 
-* Excerpt (short version)
-* Description
+* Description (one-paragraph)
 
-_Data Format_: Jobs should be stored in markdown files in a /jobs folder. Jobs should be stored in markdown files. Frontmatter should have all fields except description. Body of the file should be the description. 
+_Data Format_: Jobs should be stored inline in the YML for each creator.
 
 ### Notes on long-term data strategy
 * Right now, the data is in YAML in the GitHub repo. At some point, we may move all of our data to a format with a UI making it easier for people to submit & edit their own data, without imposing a review burden on Gatsby maintainers
