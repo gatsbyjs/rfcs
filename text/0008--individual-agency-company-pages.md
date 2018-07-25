@@ -10,6 +10,12 @@ We also want to create a free Job Board highlighting opportunities for employmen
 
 # Motivation
 
+Some high-level motivations include:
+
+* People are wanting to hire programmers who are skilled at using Gatsby already
+* People are wanting to have someone build a Gatsby site for them
+* Many individuals/agencies/companies are producing so much valuable OSS work and many beautiful websites and it'd be useful for them to market themselves to the audience that already wants them
+
 Some goals for the different components include:
 
 #### Individuals Pages
