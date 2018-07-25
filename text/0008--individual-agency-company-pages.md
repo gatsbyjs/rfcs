@@ -13,17 +13,32 @@ We also want to create a free Job Board highlighting opportunities for employmen
 Some goals for the different components include:
 
 #### Individuals Pages
-* Highlight contributions made by community members (plugins built, code PRs)
-* "Official" landing pages to help community members in their personal website marketing efforts
-* Allow companies interested in building Gatsby sites to find individuals nearby them who are open for Gatsby projects
+
+This will help highlight contributions made by community members (plugins built, code PRs) & give community members "official" landing pages to help community members in their personal website marketing efforts and allow companies interested in building Gatsby sites to find individual.
+
+Users who visit this page should be able to:
+
+* see what sites the individual has built on Gatsby and visit those sites / see details about them (probably link to the site showcase)
+* hire the person (if available)
+* see whether the person is open for Gatsby projects or not
+* find a link to the person's portfolio / outside website
 
 #### Agency Pages
-* Highlight agencies building websites on Gatsby
-* "Official" landing pages to help agencies in their marketing efforts
-* Allow companies interested in building Gatsby sites to find agencies nearby them
-* Help agencies hire for Gatsby-related positions by surfacing their postings to the community; give the community a place to look for Gatsby-related jobs.
+
+This will help agencies hire for Gatsby-related positions, give the community a place to look for Gatsby-related jobs, and see high-quality Gatsby agencies. Give agencies "official" landing pages to help them in their website marketing efforts.
+
+Users who visit this page should be able to:
+
+* see what sites the agency has built on Gatsby and visit those sites / see details about them (probably link to the site showcase)
+* get in touch with the agency
+* see job postings the agency is putting out.
 
 #### Company Pages
+
+A list of companies using Gatsby will help demonstrate that it's "enterprise-ready" & show the wide variety of use-cases Gatsby is in.
+
+Users who visit this page should be able to:
+
 * Display list of companies using Gatsby to demonstrate it's "enterprise-ready" and fulfills whatever use-case they're looking for (e-commerce, authentication, etc). 
 * Help companies hire for Gatsby-related positions by surfacing their postings to the community; give the community a place to look for Gatsby-related jobs.
 
