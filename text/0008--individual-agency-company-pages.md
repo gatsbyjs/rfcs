@@ -1,6 +1,6 @@
-- Start Date: (fill me in with today's date, YYYY-MM-DD)
-- RFC PR: (leave this empty)
-- Gatsby Issue: (leave this empty)
+- Start Date: 2018-07-24
+- RFC PR: 
+- Gatsby Issue: 
 
 # Summary
 
