@@ -69,9 +69,9 @@ Filter buttons should be at the top and should be easy to toggle between them (s
 #### Person / agency / company page
 
 One template with multiple URL patterns, depending on the Creator type:
-  * /companies/[company-name]
-  * /agencies/[agency-name]
-  * /people/[person-name]
+  * /community/companies/[company-name]
+  * /community/agencies/[agency-name]
+  * /community/people/[person-name]
 
 
 ### Data Structures
