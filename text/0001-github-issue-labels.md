@@ -89,10 +89,14 @@ There are 20 existing labels. While we're adding new labels, it makes sense to r
 
 ### Implementation steps
 
-- [ ] collate any feedback on this RFC
-- [ ] for 'redundant' labels, add their issues to the appropriate projects
-- [ ] rename, delete and add labels
-- [ ] start labelling up _new_ and _recently updated_ issues
+- [x] collate any feedback on this RFC
+- [x] for 'redundant' labels, add their issues to the appropriate projects
+- [x] rename, delete and add labels
+- [x] start labelling up _new_ and _recently updated_ issues
+
+### Labels after implementing this RFC
+
+See [Gatsby's labels list](https://github.com/gatsbyjs/gatsby/labels) for the live list of labels.
 
 # Drawbacks
 
@@ -121,8 +125,6 @@ A few approaches:
 - Posting to the [Gatsby core maintainers discussion board](https://github.com/orgs/gatsbyjs/teams/gatsby-core-maintainers)
 - Adding label descriptions to [GitHub's labels page](https://github.com/gatsbyjs/gatsby/labels)
 - Adding labelling info to [CONTRIBUTING.MD](https://github.com/gatsbyjs/gatsby/blob/master/CONTRIBUTING.md)
-
-As a follow on from this, it'd be interesting to explore automated contributor onboarding. See https://github.com/styled-components/styled-components/blob/master/CONTRIBUTING.md#ownership for a good example.
 
 # Unresolved questions
 
