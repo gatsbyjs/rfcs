@@ -55,9 +55,10 @@ Users who visit this page should be able to:
 #### All people / agencies / companies
 
 One template with multiple URLs, each of which apply different filters:
-  * /community/people/ (all people)
-  * /community/agencies/ (all agencies)
-  * /community/companies/ (all companies)
+  * /creators/ (all creators/landing)
+  * /creators/people/ (all people)
+  * /creators/agencies/ (all agencies)
+  * /creators/companies/ (all companies)
 
 Filter buttons should be at the top and should be easy to toggle between them (select-one). Filters should include:
   * Individual 
@@ -69,9 +70,9 @@ Filter buttons should be at the top and should be easy to toggle between them (s
 #### Person / agency / company page
 
 One template with multiple URL patterns, depending on the Creator type:
-  * /community/companies/[company-name]
-  * /community/agencies/[agency-name]
-  * /community/people/[person-name]
+  * /creators/companies/[company-name]
+  * /creators/agencies/[agency-name]
+  * /creators/people/[person-name]
 
 
 ### Data Structures
