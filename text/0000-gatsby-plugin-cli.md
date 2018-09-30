@@ -34,7 +34,7 @@ A new work flow for removing a plugin could look like:
 
 The problem I'm trying to solve is simplifying and accelerating the gatsby work flow in relation to managing plugins over the course of development.
 
-The major two use cases I can think to support would be installation and un-installation of plugins. Though I could see a potential use for disabling plugins (though commenting out code in the config isn't too difficult) and searching for plugins.
+The major two use cases I can think to support would be installation, un-installation, and searching for plugins.
 
 # Detailed design
 
@@ -44,11 +44,26 @@ The major two use cases I can think to support would be installation and un-inst
 
 ### Actions
 
-* add\* - Installs npm package, adds plugin to `gatsby-config.js`, warns if further config is needed. potential alias: install
-* remove\* - Removes npm package form `node_modules` and `package.json` and removes config from `gatsby-config.js`. potential alias: uninstall
-* disable - comments out config in `gatsby-config.js`.
-* enable - un-comments config in `gatsby-config.js`.
-* search - searches the [plugin database](https://www.gatsbyjs.org/plugins/) and returns relevant options
+#### add
+ - Installs npm package, adds plugin to `gatsby-config.js`, warns if further config is needed. 
+ - potential alias: install
+ - yarn/npm support and auto chooses based on lock file. support global setting if implemented.
+ - Possibly implement a `onInstallPlugin` api to handle asking for config data on execution to inject into the default config. 
+
+#### remove
+- Removes npm package form `node_modules` and `package.json`
+- Removes config from `gatsby-config.js`.
+- potential alias: uninstall 
+- yarn/npm support and auto chooses based on lock file. support global setting if implemented.
+
+#### config
+- Runs through configuration options again for dev to change answers if desired, defaults to current config.
+- uses new API
+
+
+#### search 
+- searches the [plugin database](https://www.gatsbyjs.org/plugins/) and returns relevant options
+- possibly uses `inquire.js`
 
 
 \*add/remove should/could be designed to handle gatsby plugin dependencies as well.
@@ -59,7 +74,39 @@ The major two use cases I can think to support would be installation and un-inst
 
 * **non-standard**: For the sake of convenience it would be nice if I wanted to install (for example) `gatsby-plugin-netlify`, I could either type the full name or I could just type `plugin-netlify` or even `netlify` and the command will figure out what I mean. 
 
-In the non-standard case  though there are potential for multiple plugin results. For example, if I typed just `netlify` [6 plugins](https://www.gatsbyjs.org/plugins/?=netlify) contain `netlify`. In this case it could return something saying "I'm not sure what you mean". Even better if it choose a top option I can say yes/no to or if it gave a list number 1-6 and asked me to enter the number of the one I want to install. This being said, this I'd make this a stretch goal, nice but not required.
+In the non-standard case  though there are potential for multiple plugin results. For example, if I typed just `netlify` [6 plugins](https://www.gatsbyjs.org/plugins/?=netlify) contain `netlify`. In this case it could return something saying "I'm not sure what you mean". Even better if it choose a top option I can say yes/no to or if it gave a list number 1-6 and asked me to enter the number of the one I want to install. This being said, this I'd make this a stretch goal, nice but not required. (possibly use inquire.js)
+
+## API changes
+The API would be called when adding a plugin and would handle taking the default config of the plugin requesting required fields from the user and writing the config with the user's responses. If there are non-required fields they can either not be asked or their needs to be an option to skip/leave blank.
+
+from @jlengstorf
+```js
+exports.onInstallPlugin = async ({ prompt }, existingConfig) => {
+	// Define the information that’s needed.
+	const questions = [
+		{
+			// This would match the config option name.
+			name: 'apiKey',
+			message: 'API key for <source>',
+			type: 'input',
+		},
+	];
+
+	// Ask for the input.
+	const answers = await prompt(questions);
+
+	// Optional: process the answers and/or add additional config.
+	const updatedConfig = doStuffWithAnswers(answers);
+
+	// Return the config object, which the CLI will insert into `gatsby-config.js`
+	// NOTE: This would probably need some thought (e.g. how do we delete options?)
+	return {
+		...existingConfig,
+		...updatedConfig,
+	};
+};
+```
+
 
 ## Config
 
@@ -109,4 +156,6 @@ This can be taught as streamlined approach to plugin management.
 
 # Unresolved questions
 
-I'm open for suggestions here, I modeled this after yarn/npm/apt-get.
+- I'm open for suggestions here, I modeled this after yarn/npm/apt-get.
+
+- How do we want to handle keys in config. It's not best practice to stick a key directly into the config/git. Could we inject an environment variable and use `dotenv` to save the actual variable to `.env`? Then the dev would have to worry about doing this securely in prod.
