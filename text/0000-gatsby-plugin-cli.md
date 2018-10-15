@@ -49,24 +49,23 @@ The major two use cases I can think to support would be installation, un-install
  - potential alias: install
  - yarn/npm support and auto chooses based on lock file. support global setting if implemented.
  - Possibly implement a `onInstallPlugin` api to handle asking for config data on execution to inject into the default config. 
+ - Summarises and requests confirmation of all actions that will be taken. This should handle plugins that are already installed and configured(duplicate entry) as well as new plugins being added.
 
 #### remove
-- Removes npm package form `node_modules` and `package.json`
+- Removes npm package from `node_modules` and `package.json`
 - Removes config from `gatsby-config.js`.
 - potential alias: uninstall 
 - yarn/npm support and auto chooses based on lock file. support global setting if implemented.
+- Summarises and requests confirmation of all actions that will be taken. This should handle plugins that are not installed and configured as well as plugins that are available to be removed. 
 
 #### config
 - Runs through configuration options again for dev to change answers if desired, defaults to current config.
 - uses new API
-
+- confirms all changes to config before writing changes.
 
 #### search 
 - searches the [plugin database](https://www.gatsbyjs.org/plugins/) and returns relevant options
 - possibly uses `inquire.js`
-
-
-\*add/remove should/could be designed to handle gatsby plugin dependencies as well.
 
 ### Plugin-name
 
@@ -107,7 +106,6 @@ exports.onInstallPlugin = async ({ prompt }, existingConfig) => {
 };
 ```
 
-
 ## Config
 
 Managing the config becomes the difficult part of this imo. For plugins that don't require any configuration it is easy to simply append and object containing the name. In the case of configurable plugins the cli has to get that "default" config from somewhere.
@@ -138,7 +136,7 @@ I haven't considered any other design. Not doing this just means more copy pasti
 
 # Adoption strategy
 
-We would need to update documentation and make announcements that this is now an available feature. "official" gatsby plugins can be updated to contain default configs along side this pr. 
+We would need to update documentation and make announcements that this is now an available feature. "official" gatsby plugins can be updated to contain default configs and proper README.md documentation along side this pr. 
 
 Announcements and docs can also be made for plugin maintainers on how to update their plugins. 
 
@@ -146,7 +144,7 @@ This will not be a breaking change.
 
 # How we teach this
 
-Gatsby and the cli are about simplifying through abstraction, I think this is a great continuation of that model which continues to enhance and accelerate the dev experience.
+Gatsby and the cli are about simplifying through abstraction,I think this is a great continuation of that model which continues to enhance and accelerate the dev experience.
 
 The Gatsby documentation around the CLI would have to be extended
 
