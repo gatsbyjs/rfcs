@@ -23,11 +23,11 @@ Expand top (and potentially second-level) navigation items that do not belong to
     - Digital Ocean does cool selected state and hover state stuff: https://developers.digitalocean.com/documentation/v2/#authentication
 - [x] create new categories of docs. When clicked, the only thing that happens is that sub-items become visible and the active page remains the same as it was before clicking the category name until a sub-item is clicked. So essentially, clicking on a sub-item is the only way to see a new active page.
 - [x] create stub articles for the ones we don’t have yet
-- [x] mobile menu that you can access w/o scrolling to bottom of screen (see Flo’s notes below on Reactjs.com’s mobile version vs. Stripe’s docs which ignore small screens)
-    - Currently https://www.gatsbyjs.org/docs/ is the only way on Mobile to access the Desktop sidebar content
+- [x] mobile menu that you can access w/o scrolling to the bottom of the screen (see Flo’s notes below on Reactjs.com’s mobile version vs. Stripe’s docs which ignore small screens)
+    - Currently, https://www.gatsbyjs.org/docs/ is the only way on Mobile to access the Desktop sidebar content
     - https://reactjs.org/ is an excellent example of a Mobile navigation for our sidebar content, but the button position conflicts with our current mobile navigation
     - Noteworthy: the equally excellent https://stripe.com/docs/quickstart and https://stripe.com/docs/api completely ignore smaller screens
-- [x] Find a place for starter showcase in top nav
+- [x] Find a place for starter showcase in the top nav
 - [ ] Sidebar toggle all open / all closed button
 
 Phase 2:
@@ -41,16 +41,16 @@ Phase 2:
 - [ ] Way to copy and paste code easily Ref. gatsbyjs/gatsby#5030
 
 Phase 3:
-- [ ] API on top level nav
+- [ ] API on the top level nav
 - [ ] versions of the docs
 - [ ] Way to test APIs. Ask devs for their favorite ones. 
 - [ ] automatically pull in doc prereqs at top of each page (see https://www.cockroachlabs.com/docs/stable/transactions.html as a great example of how to design this. Not sure how to code it)
-- [ ] doc accessibility/design options (changing font type and size or screen and font colors, what about language?), toggle sidebar to disappear, reappear
+- [ ] doc accessibility/design options (changing the font type and size or screen and font colors, what about language?), toggle sidebar to disappear, reappear
 - [ ] searchable API reference
 - [ ] track one ideal "paths" through the docs to see if idea is worth expanding
 - [ ] a breadcrumb trail (like Amazon does) 
 - [ ] suggesting "next steps" at the bottom of docs
-- [ ] vet feasibility/desirability of new project that focuses on enhancing our search results (perhaps pulling in Google search, showing previews, etc)
+- [ ] vet feasibility/desirability of a new project that focuses on enhancing our search results (perhaps pulling in Google search, showing previews, etc)
 
 Here is a possible restructure of the current docs information architecture (with the inclusion of many docs we still need to write):
 
@@ -105,7 +105,7 @@ Reference docs
     - Gatsby Node APIs
     - Gatsby SSR APIs 
 - Guides/Fundamentals
-    - Setting up dev environment   
+    - Setting up a dev environment   
         - Gatsby on Windows
         - Gatsby on Macs
     - Customizing site structure
@@ -177,11 +177,11 @@ Contributing
 
 Why should we *not* do this? Please consider:
 
-- Redesigning the side bar could take a lot of work.
+- Redesigning the sidebar could take a lot of work.
 
 # Alternatives
 
-I'm not aware of any other designs we've considered. The potential benefits of doing this outweight the negatives, imo. Especially because docs are only going to keep growing. The current hierarchy doesn't allow for much more growth.
+I'm not aware of any other designs we've considered. The potential benefits of doing this outweighs the negatives, imo. Especially because docs are only going to keep growing. The current hierarchy doesn't allow for much more growth.
 
 # Adoption strategy
 
@@ -189,7 +189,7 @@ If the design is intuitive, it will be easier to adopt than the current design. 
 
 # How we teach this
 
-If it's really good information architecture, it won't need to be taught ;). If we find that we have to explain it to people, we would redesign it. We could write an initial blogpost with a tour of the docs structure for those who want to understand the change and see an overview, and then this overview could be included in an intro to the docs.
+If it's really good information architecture, it won't need to be taught ;). If we find that we have to explain it to people, we would redesign it. We could write an initial blog post with a tour of the structure of the docs for those who want to understand the change and see an overview, and then this overview could be included in an intro to the docs.
 
 # Unresolved questions
 
@@ -200,7 +200,7 @@ None.
 - How many levels of nav? We'll try 3 levels of nav and adapt if that doesn't work.
 - What is the code complexity of changing the URL structure of pages? We'll need to make a list of old urls and new urls, then the site can be configured to send people from old to new. e.g.
 /docs/add-404-page/ changes to /docs/basic-tasks/adding-content/add-404-page
-- Could these plans break links people have to current docs? In many cases yes, but adding redirects is easy.
+- Could these plans break links people have to current docs? In many cases, yes, but adding redirects is easy.
 - Should we include integration tutorials and guides (such as Gatsby + Netlify, Gatsby + Contentful)? Yes, we'll encourage these contributions and encourage people to submit edits / report issues just like with any other doc and see how it goes.
 - Where did Awesome Gatsby and Starter list go? Those will be their own separate landing pages accessible from main .org nav very soon!
 
