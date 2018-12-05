@@ -128,7 +128,7 @@ This can be best described as empowering users to query against the GraphQL API
 they already know and use, but now also dynamically.
 
 We would need to teach a variety of new concepts such as cloud platforms to
-to deploy the server and GraphQL clients.
+deploy the server to and GraphQL clients.
 
 It is especially important to teach the difference between static and dynamic
 queries, their limitations, and when to use one or the other.
