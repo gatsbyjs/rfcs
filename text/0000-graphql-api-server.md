@@ -134,3 +134,7 @@ deploy the server to and GraphQL clients.
 
 It is especially important to teach the difference between static and dynamic
 queries, their limitations, and when to use one or the other.
+
+# Unresolved questions
+
+- Should we implement any authentication, and if so, how?
