@@ -31,6 +31,8 @@ or location, dynamic pagination and probably many more.
 It can even be used as a source for a different Gatsby site via
 gatsby-source-graphql!
 
+Another big opportunity, as [pointed out](https://github.com/gatsbyjs/rfcs/pull/22#issuecomment-444414605) by [@sedubois](https://github.com/sedubois), is using Gatsby as a middleware to unify multiple data sources into a single, consistent GraphQL API and using that as a content source for different front ends (e.g. an iOS app, an Android app, and a Gatsby site all get their content from the same Gatsby API).
+
 # Detailed design
 
 The Gatsby API server is entirely optional and additional to the existing static
