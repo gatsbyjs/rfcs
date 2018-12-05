@@ -62,9 +62,7 @@ There should also be sensible defaults, such as:
 apiServer({
   port: `process.env.PORT || 8080`,
   host: `0.0.0.0`
-});Optional, but suggested for first drafts. What parts of the design are still
-TBD?
-
+});
 ```
 
 There will be opt-in CORS support. The JavaScript API also supports passing
