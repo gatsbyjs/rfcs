@@ -31,7 +31,12 @@ or location, dynamic pagination and probably many more.
 It can even be used as a source for a different Gatsby site via
 gatsby-source-graphql!
 
-Another big opportunity, as [pointed out](https://github.com/gatsbyjs/rfcs/pull/22#issuecomment-444414605) by [@sedubois](https://github.com/sedubois), is using Gatsby as a middleware to unify multiple data sources into a single, consistent GraphQL API and using that as a content source for different front ends (e.g. an iOS app, an Android app, and a Gatsby site all get their content from the same Gatsby API).
+Another big opportunity, as
+[pointed out](https://github.com/gatsbyjs/rfcs/pull/22#issuecomment-444414605)
+by [@sedubois](https://github.com/sedubois), is using Gatsby as a middleware to
+unify multiple data sources into a single, consistent GraphQL API and using that
+as a content source for different front ends (e.g. an iOS app, an Android app,
+and a Gatsby site all get their content from the same Gatsby API).
 
 # Detailed design
 
@@ -126,7 +131,10 @@ the API server.
 
 # How we teach this
 
-A large part of the work on this will be documentation. We need to teach about what the API is, how to set it up and deploy it, how to use it in Gatsby sites and how to use it as a middleware for other types of apps. I imagine this will result in an entire new "Guides" section, containing at least 5 articles.
+A large part of the work on this will be documentation. We need to teach about
+what the API is, how to set it up and deploy it, how to use it in Gatsby sites
+and how to use it as a middleware for other types of apps. I imagine this will
+result in an entire new "Guides" section, containing at least 5 articles.
 
 It is especially important to teach the difference between static and dynamic
 queries, their limitations, and when to use one or the other.
