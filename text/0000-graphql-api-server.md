@@ -126,11 +126,7 @@ the API server.
 
 # How we teach this
 
-This can be best described as empowering users to query against the GraphQL API
-they already know and use, but now also dynamically.
-
-We would need to teach a variety of new concepts such as cloud platforms to
-deploy the server to and GraphQL clients.
+A large part of the work on this will be documentation. We need to teach about what the API is, how to set it up and deploy it, how to use it in Gatsby sites and how to use it as a middleware for other types of apps. I imagine this will result in an entire new "Guides" section, containing at least 5 articles.
 
 It is especially important to teach the difference between static and dynamic
 queries, their limitations, and when to use one or the other.
