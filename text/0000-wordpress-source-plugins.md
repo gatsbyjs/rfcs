@@ -1,16 +1,26 @@
 - Start Date: 2018-06-08
 - RFC PR: (leave this empty)
-- Gatsby Issue: (leave this empty) <!-- #5796? -->
+- Gatsby Issue: (leave this empty)
 
 # Summary
 
-WordPress is an excellent headless CMS for Gatsby, but many WordPress plugins require an additional wrapper before their data can be used within Gatsby. This RFC proposes adding support for _subplugins_ to `gatsby-source-wordpress`, so individual WordPress plugins can work with Gatsby without requiring changes to `gatsby-source-wordpress` itself.
+WordPress is an excellent headless CMS for Gatsby, but many WordPress plugins require an additional wrapper before their data can be used within Gatsby. Currently, support for [a select number of WordPress plugins](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/#wordpress-plugins) are built directly into `gatsby-source-wordpress`:
+
+- Custom Post Types, including those made with Custom Post Type UI WordPress plugin
+- [Advanced Custom Fields](https://advancedcustomfields.com) + [ACF to REST API](https://github.com/airesvsg/acf-to-rest-api)
+- [WP API MENUS](https://wordpress.org/plugins/wp-api-menus/)
+- [WPML REST API](https://github.com/shawnhooper/wpml-rest-api)
+- [WP REST Polylang](https://github.com/maru3l/wp-rest-polylang)
+
+What if `gatsby-source-wordpress` had a generic way to pull in data from any plugin’s WordPress REST API endpoint?
+
+This RFC proposes adding support for plugins that extend the functionality of the `gatsby-source-wordpress` plugin to work with specific WordPress plugins. These are referred to as _subplugins_ for the rest of this document.
+
+Plugins on a WordPress site using the WordPress REST API can then work with Gatsby, without requiring changes to `gatsby-source-wordpress` itself.
 
 # Basic example
 
-Currently, a select number of WordPress plugins are supported within `gatsby-source-wordpress`.
-
-What if `gatsby-source-wordpress` had a generic way to pull in data from any plugin’s WordPress REST API endpoint? As suggested by @m-allanson in https://github.com/gatsbyjs/gatsby/issues/5796#issue-330604409, the configuration for that might look like this:
+As suggested by @m-allanson in https://github.com/gatsbyjs/gatsby/issues/5796#issue-330604409, the configuration for that might look like this:
 
 ```js
 // In your gatsby-config.js
@@ -114,21 +124,17 @@ other projects or libraries?
 
 This approach gives us the opportunity to coordinate with the WordPress plugin community, without the requirement of doing so.
 
-The WordPress community appears to be moving towards a similar goal:
+The WordPress community has been moving closer towards the JS community already, especially with the most recent release of WordPress:
 
 > Take Every Opportunity to really beef up your JavaScript Chops
 > <footer>—Mall Mullenweg, co-creator of WordPress</footer>
 
 …as summarised by Wes Bos in [<cite>Learn JavaScript</cite>](https://wesbos.com/learn-javascript/)).
 
-Gravity Forms team has written about on [Gutenberg](https://wordpress.org/plugins/gutenberg/) (WordPress’ re-build of their content editor in React, etc.):
+Gravity Forms team has written about on [Gutenberg](https://wordpress.org/plugins/gutenberg/) (WordPress’ re-build of their content editor in React, etc, see also https://github.com/gatsbyjs/gatsby/issues/7465):
 
 > Not only is Gutenberg is changing the editing experience, but it'll also change how WordPress plugins are used and developed. … Instead of clicking the Add Form button above the editor to place a shortcode the page, a form can be placed just like any other content by simply adding a block.
 > <footer>—Jeff Matson, Gravity Forms, [<cite>Gutenberg is Coming. Are You Ready?</cite>](https://www.gravityforms.com/gutenberg-coming/)</footer>
-
-…you can see the community is going to be moving in our direction too.
-
-TK Discussing what WordPress Gutenberg is in this RFC may be an unnecessary tangent. The point is that the Gutenberg editor / WP REST API is the way forward for WordPress core, and that approach works well with the kind of data Gatsby needs. WordPress plugins are and will continue to move to this approach, meaning more and more WordPress plugins could work with Gatsby with a subplugin wrapper like we are proposing here.
 
 With this change, a WordPress plugin authors might opt to maintain their own subplugn as well, as it would provide a clear way of using their REST API implementation. If not, this approach still allows a member of the community who has a direct need for the plugin to maintain the subplugin, and can do so without needing to coordinate with the WordPress plugin author.
 
@@ -146,5 +152,6 @@ at any level?
 > Optional, but suggested for first drafts. What parts of the design are still
 TBD?
 
+- **[Detailed design](#detailed-design)**
 - **Would this mean moving the existing plugins supported out of `gatsby-source-wordpress`?** Right now I think we should keep ACF support in `gatsby-source-wordpress`, but I can also see the case for moving all WordPress plugin…plugins out of it.
 - **Should the plugins be responsible for re-formatting data for Gatsby when needed?** Often, the WP REST API returns nothing or `false` when you need it to return `null` for GraphQL. This also happens within the WP REST API implementations of each individual WordPress plugin. It can be solved with another WordPress plugin, but then you’d need a the original WP plugin, the companion WordPress plugin, and the companion Gatsby plugin to be able to support any WP plugins. Alternatively, the Gatsby plugin can it. I believe there is a proposal (from @pieh?) about mitigating this at a higher level for other Gatsby source plugins too, not sure if that would extend to this. (Can this already be done with the new Normalizers option? https://github.com/gatsbyjs/gatsby/pull/5603)
