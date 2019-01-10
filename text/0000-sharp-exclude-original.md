@@ -55,7 +55,7 @@ export const query = graphql`
       relativePath: { eq: "shop/myimage.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 800, excludeOriginal: false) {
+        fluid(maxWidth: 800, excludeOriginal: true) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
