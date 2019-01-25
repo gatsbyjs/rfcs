@@ -117,6 +117,8 @@ Instead of replacing the API as above, we could make context uninferable, but al
 
 In addition, with explicit typeDefs, context can be a Union, which will further increase type safety.
 
+The drawback of this alternative is that while it makes migration easier, it makes case for new user harder (have to remember to add typedefs).
+
 # Adoption strategy
 
 It's doubtful the codemod is possible. However, GraphQL schema will provide helpful errors so that update is as painless as possible. It might be possible to add additional errors related to this to make it simpler for people to find.
