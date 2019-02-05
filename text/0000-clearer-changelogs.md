@@ -4,7 +4,7 @@
 
 # Summary
 
-The aim of this RFC is to make Gatsby's changelogs clearer and more concise, by improving the formatting of Gatsby's changelogs.
+The aim of this RFC is to make Gatsby's changelogs clearer and more concise, by improving their formatting.
 
 > Note: See the [related RFC on changelog entries](https://github.com/gatsbyjs/rfcs/pull/27)
 
