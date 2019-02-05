@@ -76,7 +76,7 @@ The purpose of this RFC is to discuss making the information in Gatsby's changel
 
 Here's a list of changes implemented in the proposed example above.
 
-## Add a (optional, but encouraged) short description to each item
+### Add a (optional, but encouraged) short description to each item
 
 Add a 'no context' description to each PR before merging it. This would allow us to automatically include these descriptions in the changelog.
 
@@ -92,7 +92,7 @@ Often a changelog entry will be the line "Note: Version bump only for package <p
 
 Modify the changelog generation preset we're using to provide information in place of this message.
 
-### Streamline category display
+### Streamline category display
 
 Most releases have less than five items (often, just one item) in them, making the category headings feel unnecessary. A couple of changes to improve readability:
 
