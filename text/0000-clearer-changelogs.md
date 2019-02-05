@@ -111,6 +111,8 @@ This doesn't provide any additional information over the PR link. Remove it.
 
 Contributors are nice, let's credit them for their work.
 
+## Other changes
+
 ### Update monorepo root changelog
 
 There's a [(mostly unused) root changelog](https://github.com/gatsbyjs/gatsby/blob/master/CHANGELOG.md) which should be updated to point to the individual changelogs.
