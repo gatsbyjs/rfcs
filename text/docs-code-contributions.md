@@ -28,10 +28,11 @@ Contributing
     - How to file an issue
     - How to label an issue
     - Free swag for contributors
-    - Contributing to the repo
-        - page includes moved content from "How to contribute" incl. starter library, website, everything that isn't docs (with a mention of plugins section).
     - Contributing to the documentation
         - Docs templates
+    - Contributing to the repo
+        - page includes moved content from "How to contribute" incl. starter library, website, everything that isn't docs (with a mention of plugins section).
+    - Setting up test environments (Wordpress, Contentful, etc.)
 - RFC process
 - Submit to Site Showcase
 - Submit to Creator Showcase
