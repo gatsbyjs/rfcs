@@ -16,28 +16,38 @@ A lot of this information already lives on the "How to Contribute" page, but it'
 
 I propose that we add some pages to the existing contributor documentation and move some content around. Here is an IA diagram that (briefly) reflects the current structure and what I think we should add (open for discussion, of course):
 
+Docs
+- Guides
+- Ecosystem
+- API Reference
+- Releases & Migration
+- Conceptual Guide
+- Behind the Scenes
+- Advanced Tutorials
+
 Contributing
 - Community
+    - Why contribute to Gatsby?
     - Pair Programming Sessions
-    - Where to participate in the community (this was in RFCs, perhaps it could be reintroduced and content moved from "How to contribute"?)
+    - Free swag for contributors
+    - Where to participate in the community
     - How to run a Gatsby workshop*
     - How to pitch Gatsby*
 - Code of Conduct
 - Gatsby Style Guide
 - How to contribute
-    - How to file an issue
-    - How to label an issue
-    - Free swag for contributors
-    - Contributing to the documentation
-        - Docs templates
-    - Contributing to the repo
-        - page includes moved content from "How to contribute" incl. starter library, website, everything that isn't docs (with a mention of plugins section).
-    - Setting up test environments (Wordpress, Contentful, etc.)
+    * Filing & Managing issues
+    * Managing pull requests
+    * Setting up your local dev environment
+    * Docs contributions
+    * Code contributions
+    * Community contributions
+    * Showcase contributions
+        - Submit to Site Showcase
+        - Submit to Creator Showcase
+        - Submit to Starter Library
+        - Submit to Plugin Library
 - RFC process
-- Submit to Site Showcase
-- Submit to Creator Showcase
-- Submit to Starter Library
-- Submit to Plugin Library
 
 # Drawbacks
 
