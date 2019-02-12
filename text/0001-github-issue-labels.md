@@ -4,13 +4,13 @@
 
 # Summary
 
-Implement a labelling system for [issues on Gatsby's GitHub repo](https://github.com/gatsbyjs/gatsby/issues). This is following up from discussion at the recent Gatsby Maintainer Summit.
+Implement a labelling system for [issues on Gatsby's GitHub repo](https://github.com/gatsbyjs/gatsby/issues) and [pull requests on Gatsby's Github repo](https://github.com/gatsbyjs/gatsby/pulls). This is following up from discussion at the recent Gatsby Maintainer Summit.
 
 Refs https://github.com/gatsbyjs/gatsby/issues/4311
 
 # Motivation
 
-People _want_ to contribute to Gatsby, but with (currently) over 500 open issues it's difficult to know where to start.
+People _want_ to contribute to Gatsby, but with (currently) over 500 open issues and 120 pull requests it's difficult to know where to start.
 
 The aim is to make it easier for new and existing contributors to work on Gatsby without adding too much admin overhead. It's important for the labelling system to be quick to manage to ensure that it's used!
 
@@ -21,6 +21,7 @@ The broad areas discussed were:
 - Type: labels like `bug`, `discussion`, `feature request`
 - Status: labels like `needs repro`, `ready`
 - Misc: labels like `good first issue`
+- Topics: labels like `blogpost`, `themes`, `starters`
 - Target (area of responsibility): Use GitHub projects
 - Roadmap: Use GitHub Milestones
 
@@ -46,7 +47,13 @@ Optional
 
 So far these are labels indicating that an issue is a well-defined piece of work or labels used by bots.
 
-label: `good first issue`, `hacktober`, `stale?`, `review`
+label: `good first issue`, `help wanted`, `hacktober`, `stale?`, `review`
+
+### Topic label
+
+Optional
+
+labels: `topic: blogpost`, `topic: wordpress`, `topic: remark`, `topic: themes`
 
 ### Projects
 
@@ -75,10 +82,10 @@ There are 20 existing labels. While we're adding new labels, it makes sense to r
 | GraphQL | ❌delete | too specific (currently applied to 13 issues) |
 | Hacktoberfest | ✅keep | exact name is used by Hacktoberfest, don't rename  |
 | Help Wanted for Plugins | ❌delete |  too specific (currently applied to 4 issues) |
-| Help Wanted in Core | ✅keep | rename to `help wanted` or similar |
+| Help Wanted in Core | ✅keep | rename to `help wanted` exact name is used by GitHub, don't rename |
 | needs-repro | ✅keep | rename to `needs repro` or similar |
 | performance | ❌delete | too specific (currently applied to 4 issues) |
-| question | ✅keep | rename to `type: discussion` or similar |
+| question | ✅keep | rename to `type: question or discussion` or similar |
 | review | ❌delete | ~~~Used by wafflebot? Investigate this~~~ No longer used |
 | stale? |  ✅keep | Used by stalebot to close stale issues. Maybe rename to `bot: stale?` |
 | upstream-issue | ❌delete | I'm 50/50 on this one. There's only two issues using it so have opted to delete it |
@@ -129,4 +136,3 @@ A few approaches:
 # Unresolved questions
 
 - Do we need to create any additional projects to assign issues to?
-
