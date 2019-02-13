@@ -71,28 +71,42 @@ We talked about using GitHub's Milestones as a way of defining a roadmap however
 
 There are 20 existing labels. While we're adding new labels, it makes sense to revisit the existing ones. Having a small, clearly defined set of labels makes it much more likely that the labelling system will be used. Here's what I propose should happen to each of them:
 
-| Label  | Destiny | Notes |
-|---|---|---|
+| Label | Destiny | Notes |
+|------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------|
 | API/Plugins | ❌delete | too specific (currently applied to 66 issues) |
-| bug | ✅keep |  rename to `type: bug` or similar |
-| Documentation | ✅keep | rename to `type: documentation` or similar |
-| DX | ❌delete |  too specific (currently applied to 13 issues) |
-| Feature Request | ✅keep | rename to `type: feature` or similar |
+| bug | ✍️rename | rename to `type: bug` or similar |
+| blogpost | ✍️rename | rename to `topic: blogpost` |
+| breaking change | ✅keep | It's a breaking change, might be consideration for the next major |
+| Documentation | ✍️rename | rename to `type: documentation` or similar |
+| DX | ❌delete | too specific (currently applied to 13 issues) |
+| Feature Request | ✍️rename | rename to `type: feature or enhancement` or similar |
 | good first issue | ✅keep | exact name is used by GitHub, don't rename |
 | GraphQL | ❌delete | too specific (currently applied to 13 issues) |
-| Hacktoberfest | ✅keep | exact name is used by Hacktoberfest, don't rename  |
-| Help Wanted for Plugins | ❌delete |  too specific (currently applied to 4 issues) |
-| Help Wanted in Core | ✅keep | rename to `help wanted` exact name is used by GitHub, don't rename |
-| needs-repro | ✅keep | rename to `needs repro` or similar |
+| Hacktoberfest | ✅keep | exact name is used by Hacktoberfest, don't rename |
+| Help Wanted for Plugins | ❌delete | too specific (currently applied to 4 issues) |
+| Help Wanted in Core | ✍️rename | rename to `help wanted` exact name is used by GitHub, don't rename |
+| needs-repro | ✍️rename | rename to `status: needs reproduction` or similar |
+| no triage | ✅keep | rename to something that's more descriptive. We could also use `status: confirmed` |
 | performance | ❌delete | too specific (currently applied to 4 issues) |
-| question | ✅keep | rename to `type: question or discussion` or similar |
+| question | ✍️rename | rename to `type: question or discussion` or similar |
 | review | ❌delete | ~~~Used by wafflebot? Investigate this~~~ No longer used |
-| stale? |  ✅keep | Used by stalebot to close stale issues. Maybe rename to `bot: stale?` |
-| upstream-issue | ❌delete | I'm 50/50 on this one. There's only two issues using it so have opted to delete it |
-| UX Design | ❌delete | redundant - add all issues with this label to the 'UX' project before deleting the label |
+| stale? | ✅keep | Used by stalebot to close stale issues. Maybe rename to `bot: stale?` |
+| status: assigned | ➕added | Mark issues as claimed for non contributors that can't use the assigned field in github |
+| status: awaiting author response | ➕added | Additional information or changes have been requested from the author |
+| status: awaiting reviewer response | ➕added | A pull request that is currently awaiting a reviewer's response |
+| status: blocked | ➕added | Issue or pull request that can't be resolved at the moment |
+| status: confirmed | ➕added | Issue with steps to reproduce the bug that’s been verified by at least one reviewer |
+| status: duplicate | ❌delete | we're not using it as we just close and refer the issue to the original one so we can still keep track of all duplicates |
+| status: inkteam to review | ✍️rename | rename to something that's more descriptive |
+| status: needs more info | ➕added | Needs triaging and more information to be resolved |
+| status: wip | ➕added | Work in progress ... inputs welcome! ❤️ |
+| upstream-issue | ✍️rename | Rename to `type: upstream` as it indicates an issue out of our control |
+| themes | ✍️rename | rename to `topic: themes` |
+| UX Design | ✍️rename | rename to `type: design` |
+| type: maintenance | ➕added | maintenance work that needs to be done, updating packages, tests, ... |
 | v0 | ❌delete | it's never been used |
-| v1  | ❌delete | We _could_ keep this but I don't think it adds much value (currently applied to 8 issues) |
-| v2  | ❌delete | redundant - add all issues with this label to the 'v2' project before deleting the label (currently applied to 7 issues) |
+| v1 | ❌delete | We _could_ keep this but I don't think it adds much value (currently applied to 8 issues) |
+| v2 | ❌delete | redundant - add all issues with this label to the 'v2' project before deleting the label (currently applied to 7 issues) |
 
 ### Implementation steps
 
@@ -136,3 +150,5 @@ A few approaches:
 # Unresolved questions
 
 - Do we need to create any additional projects to assign issues to?
+- Do we need to mark priorities? (can github projects help with ordering?)
+- Do we want to mark difficulty or complexity to bugs and features making community contribution *easier*?
