@@ -38,7 +38,7 @@ Contributing
 - How to Contribute
     * How to File an Issue
     * How to Label an Issue
-    * Managing Issues and Pull Requests
+    * Triaging GitHub Issues
     * Setting up your Local Dev Environment
     * Docs Contributions
     * Code Contributions
