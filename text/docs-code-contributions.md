@@ -27,27 +27,28 @@ Docs
 
 Contributing
 - Community
-    - Why contribute to Gatsby?
+    - Why Contribute to Gatsby?
     - Pair Programming Sessions
-    - Free swag for contributors
-    - Where to participate in the community
-    - How to run a Gatsby workshop*
-    - How to pitch Gatsby*
+    - Free Swag for Contributors
+    - Where to Participate in the Community
+    - How to Run a Gatsby Workshop
+    - How to Pitch Gatsby
 - Code of Conduct
 - Gatsby Style Guide
-- How to contribute
-    * Filing & Managing issues
-    * Managing pull requests
-    * Setting up your local dev environment
-    * Docs contributions
-    * Code contributions
-    * Community contributions
-    * Showcase contributions
+- How to Contribute
+    * How to File an Issue
+    * How to Label an Issue
+    * Managing Issues and Pull Requests
+    * Setting up your Local Dev Environment
+    * Docs Contributions
+    * Code Contributions
+    * Community Contributions
         - Submit to Site Showcase
         - Submit to Creator Showcase
         - Submit to Starter Library
         - Submit to Plugin Library
-- RFC process
+- RFC Process
+- Gatsby's Governance Model*
 
 # Drawbacks
 
