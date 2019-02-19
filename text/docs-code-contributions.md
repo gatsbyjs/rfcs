@@ -39,9 +39,10 @@ Contributing
     * How to File an Issue
     * How to Label an Issue
     * Triaging GitHub Issues
-    * Setting up your Local Dev Environment
     * Docs Contributions
+    * Blog & Website Contributions
     * Code Contributions
+    * Setting up your Local Dev Environment
     * Community Contributions
         - Submit to Site Showcase
         - Submit to Creator Showcase
