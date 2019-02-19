@@ -113,6 +113,10 @@ This function should be exported as a named export by the `gatsby` package.
 - The same limitations of the development GraphQL schema also apply to this,
   namely that it doesn't support fragments provided by plugins yet (popular
   example: `gatsby-image`'s numerous fragments).
+- Queries that are the same at build time and run time must be duplicated
+  ([example](https://github.com/jgierer12/gatsby-api-proposal-demo/blob/master/src/pages/index.js#L10-L66)).
+  This could for example be solved by being able to pass strings to Gatsby's
+  `graphql` function, or importing `.graphql` files.
 
 # Alternatives
 
