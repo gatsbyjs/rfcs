@@ -67,7 +67,7 @@ There should also be sensible defaults, such as:
 
 ```js
 apiServer({
-  port: `process.env.PORT || 8080`,
+  port: process.env.PORT || `8080`,
   host: `0.0.0.0`
 });
 ```
