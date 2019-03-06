@@ -30,6 +30,8 @@ For example:
 ### Privacy
 We take privacy very seriously. As such, all personally identifiable or sensitive information, such as IP addresses, private NPM packages, email addresses or secret keys, will not be logged. Also analytics will be voluntary and users may opt-out any time.
 
+All code for gathering metrics will be open-source and maintained inside gatsbyjs/gatsby. We'll create a test suite to ensure that common ways for private information to leak can't happen.
+
 ### Event details
 We will record the following types of events:
 * CLI_COMMAND_[COMMAND], when the user runs a command locally
