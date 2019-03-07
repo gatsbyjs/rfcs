@@ -50,9 +50,9 @@ Depending on the event, we will record following information:
 
 ### Opting out
 Gatsby analytics helps us maintainers so we will appreciate leaving it on.
-If you want to opt out, however, you can run ``gatsby analytics --disable`` or edit the ~/.config/gatsby/config.json and add ``"analytics": false`.`
+If you want to opt out, however, you can run `gatsby analytics --disable` or edit the ~/.config/gatsby/config.json and add `"analytics": false`.
 
-To opt back in, you can run  ``gatsby analytics --enable``.
+To opt back in, you can run  `gatsby analytics --enable`.
 
 ## Drawbacks
 
