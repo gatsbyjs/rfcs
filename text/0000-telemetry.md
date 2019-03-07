@@ -3,7 +3,7 @@
 - Gatsby Issue: (leave this empty)
 
 ## Summary
-We at Gatsby Inc. are planning to start collecting anonymous metrics to guide the Gatsby development priorities, track and highlight plugin usage, identify common errors to fix, and overall make more educated decisions to help the Gatsby community grow.
+We at Gatsby Inc. are planning to start collecting anonymous telemetry to guide the Gatsby development priorities, track and highlight plugin usage, identify common errors to fix, and overall make more educated decisions to help the Gatsby community grow.
 
 In the future, we’ll create public dashboards with aggregated data from Gatsby usage so the entire community can view the health of various Gatsby ecosystem properties and pitch in to help improve them. A future RFC will cover this work.
 
@@ -30,7 +30,7 @@ For example:
 ### Privacy
 We take privacy very seriously. As such, all personally identifiable or sensitive information, such as IP addresses, private NPM packages, email addresses or secret keys, will not be logged. Also analytics will be voluntary and users may opt-out any time.
 
-All code for gathering metrics will be open-source and maintained inside gatsbyjs/gatsby. We'll create a test suite to ensure that common ways for private information to leak can't happen.
+All code for gathering telemetry will be open-source and maintained inside gatsbyjs/gatsby. We'll create a test suite to ensure that common ways for private information to leak can't happen.
 
 ### Event details
 We will record the following types of events:
@@ -62,7 +62,7 @@ We do have somewhat detailed (albeit spotty) ways of getting some information ab
 
 # Alternatives
 
-There aren't really any alternatives — without directly sending information about usage, we only have proxy metrics which are incomplete and often misleading (hello NPM downloads count).
+There aren't really any alternatives — without directly sending information about usage, we only have proxy telemetry which are incomplete and often misleading (hello NPM downloads count).
 
 We could do opt-in instead of opt-out but that would mean most people wouldn't ever know to opt-in and our data collection would be probably useless as we'd only see a small % of user activity and never be sure what % it is of the real total.
 
