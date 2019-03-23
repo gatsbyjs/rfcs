@@ -1,4 +1,4 @@
-- Start Date: (fill me in with today's date, YYYY-MM-DD)
+- Start Date: 2019-03-22
 - RFC PR: (leave this empty)
 - Gatsby Issue: (leave this empty)
 
