@@ -60,7 +60,7 @@ There are tradeoffs to choosing any path. Attempt to identify them here.
 
 # Alternatives
 
-We have looked through quite a few documents on error design and surveyed other CLI’s to report on their error messaging. [RFC CLI Redesign here]()
+We have looked through quite a few documents on error design and surveyed other CLI’s to report on their error messaging. [RFC CLI Redesign here](https://github.com/gatsbyjs/rfcs/pull/38/files)
 
 The impact of not doing this is that Gatsby users continue to struggle to resolve errors with unhelpful messages and the Github repo serves as a sorting ground for issues dealing with known errors that could be fixed closer to their source.
 
