@@ -10,7 +10,7 @@ Wishlist for the next major version of Gatsby
 
 *We have not started work on the next major version of Gatsby, and there is no timeline for when we’ll start, or when it will be available.*
 
-This issue is intended to collect any breaking changes that might require a major version before they can be implemented. Nothing on here is guaranteed to happen.
+This rfc is intended to collect any breaking changes that might require a major version before they can be implemented. Nothing on here is guaranteed to happen.
 
 When we get closer to working on these changes, this issue will probably be closed and split out into separate issues.
 
