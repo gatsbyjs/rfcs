@@ -6,7 +6,7 @@
 
 This `rfcs` repository has unfortunately not been given the care and attention that such crucial and sweeping changes deserve. One seemingly obvious reason is that the `rfcs` repo is separate from the GatsbyJS monorepo which gets much more traffic and attention from not only the community but also the GatsbyJS open-source team (@gatsbyjs/core).
 
-From this perspective, I propose a revamp of this underlying model to more effectively surface this valuable community feedback and ensure that the community has ample opportunity to help shape and influence Gatsby open-source functionality, with a direct line of feedback to the open-source team. Specifically, I propose:
+From this perspective, I propose a revamp of this underlying model to more effectively surface this valuable community feedback and ensure that the community has ample opportunity to help shape and _influence_ Gatsby open-source, with a direct line of feedback to the open-source team. Specifically, I propose:
 
 1. We deprecate this repo and close any outstanding pull requests in this repo
 1. We document and encourage users to open up RFCs as pull requests to the official GatsbyJS monorepo (`gatsbyjs/gatsby`)
