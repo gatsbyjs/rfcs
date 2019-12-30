@@ -35,6 +35,10 @@ As we will now be using the monorepo, we will want to encourage contributions to
 
 All open pull requests will be closed. We encourage any RFC authors in this repo to re-open the pull request to the gatsbyjs/gatsby monorepo if necessary.
 
+## Create an `rfcs/README.md` file
+
+This will be how we teach the RFC process. We _may_ publish this to gatsbyjs.org/rfcs.
+
 ## Create an `rfcs/0000-template.md` file
 
 This Markdown file will be the source from which all RFCs are created. It will look like the following:
