@@ -166,7 +166,7 @@ We will refer Gatsby developers to the aforementioned guide, as well as the READ
 # Unresolved questions
 
 1. When can an RFC be closed/merged?
-  - My proposal: _ideally_ an RFC is merged alongside the implementation
-  - If a separate author implements the RFC, the RFC can be closed when the pull request is opened closing the RFC
+    - My proposal: _ideally_ an RFC is merged alongside the implementation
+    - If a separate author implements the RFC, the RFC can be closed when the pull request is opened closing the RFC
 1. Does an RFC start as an issue? Or a PR?
-  - An RFC _may_ implement an existing issue, but it does not *need* to
+    - An RFC _may_ implement an existing issue, but it does not *need* to
