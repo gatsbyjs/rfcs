@@ -161,7 +161,7 @@ This will spell out the process for an RFC, specifically:
 
 # How we teach this
 
-We will refer Gatsby developers to the aforementioned guide, as well as the README that will exist at `gatsbyjs/rfcs/README.md`
+We will refer Gatsby developers to the aforementioned guide which will be sourced from the README that will exist at `gatsbyjs/rfcs/README.md`
 
 # Unresolved questions
 
