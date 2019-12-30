@@ -144,7 +144,7 @@ export default class ExampleComponent extends React.Component {
 
 There's now a little packet of JSON attached to the component! Also, the static file name would be a hash of the query so on the off-chance you reuse a query, webpack 4 would split out the query result module into a new chunk that's shared between components.
 
-It'll also enable new types of components that you can now attach not just markup, styles, and interactivity, but also bits of data. E.g. imagine a SEO component that queries standard data + you can pass in page specific data as well. Or a team member avatar component that has queried the name + image of the 10 team members so you can drop in the component anywhere it's needed. Or a product preview that you can manually add throughout the site as needed. Or a menu component.
+It'll also enable new types of components that you can now attach not just markup, styles, and interactivity, but also bits of data. E.g. imagine an SEO component that queries standard data + you can pass in page specific data as well. Or a team member avatar component that has queried the name + image of the 10 team members so you can drop in the component anywhere it's needed. Or a product preview that you can manually add throughout the site as needed. Or a menu component.
 
 # Drawbacks
 
