@@ -144,7 +144,7 @@ There are a few alternatives worth considering. Specifically:
 
 ## Keep this repo as-is
 
-We could not do this (of course) and keep the status quo. This has no drawbacks, and one positive in their is zero effort required to keep the status quo.
+We could not do this (of course) and keep the status quo. This has no drawbacks, and one positive in that there is zero effort required to keep the status quo.
 
 However this also does not have any of the aforementioned advantages of moving this content into the monorepo.
 
