@@ -6,11 +6,6 @@
 
 We want to survey error messages and see where we can improve them.
 
-# Basic example
-
-If the proposal involves a new or changed API, include a basic code example.
-Omit this section if it's not applicable.
-
 # Motivation
 
 Part of starting, developing, and producing a Gatsby site is resolving errors. Gatsby’s error messages have inconsistent formatting and don’t always help people resolve the errors. We can improve them!
