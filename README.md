@@ -92,12 +92,12 @@ Furthermore, the fact that a given RFC has been accepted and is 'active'
 implies nothing about what priority is assigned to its implementation, nor
 whether anybody is currently working on it.
 
-Modifications to active RFCs can be done in followup PRs. We strive to write
-each RFC in a manner that it will reflect the final design of the feature; but
+Modifications to active RFCs can be done in follow-up PRs. We strive to write
+each RFC in a manner that will reflect the final design of the feature; but
 the nature of the process means that we cannot expect every merged RFC to
 actually reflect what the end result will be at the time of the next major
 release; therefore we try to keep each RFC document somewhat in sync with the
-language feature as planned, tracking such changes via followup pull requests
+language feature as planned, tracking such changes via follow-up pull requests
 to the document.
 
 ## Implementing an RFC
